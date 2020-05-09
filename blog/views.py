@@ -71,11 +71,11 @@ def add_comment_to_post(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, 'We have recieved your comment. Before publish we need to verify it.')
+            messages.success(request, 'We have received your comment. Before publish we need to verify it.')
             return redirect('post_detail', pk=post.pk)
         else:
             form = CommentForm()
-            messages.error(request, "Sorry, we didn't recieve your Comment.")
+            messages.error(request, "Sorry, we didn't receive your Comment.")
     return render(request, 'blog/comment_form.html', {'form':form})
 
 @login_required
