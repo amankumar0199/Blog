@@ -13,7 +13,7 @@ class PostForm(forms.ModelForm):
         }
 
 
-
+#comment form
 class CommentForm(forms.ModelForm):
     class Meta():
         model = Comment
